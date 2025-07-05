@@ -1,0 +1,17 @@
+# Add files here to ignore them from prettier formatting
+/dist
+/coverage
+/.nx/cache
+/.nx/workspace-data
+/node_modules
+/tmp
+**/dist
+**/.expo
+**/android
+**/public
+**/.astro
+**/node_modules
+**/*.lock
+**/*.yaml
+Dockerfile
+**/routerTree.gen.ts
