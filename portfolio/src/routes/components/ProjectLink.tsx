@@ -14,7 +14,7 @@ const ProjectLink = (props: Props) => {
         <div
             id={`${item.id}-link`}
             key={`${item.id}-link`}
-            className="group text-dynamic flex cursor-pointer items-center gap-5 text-neutral-500 uppercase transition-colors duration-300 hover:text-neutral-400 data-[selected=true]:font-bold data-[selected=true]:text-white"
+            className="group text-dynamic flex cursor-pointer items-center gap-5 font-medium text-neutral-500 uppercase transition-colors duration-300 hover:text-neutral-400 data-[selected=true]:font-bold data-[selected=true]:text-white"
             data-selected={activeId === item.id}
             onClick={() => {
                 document.getElementById(`${item.id}-item`)?.scrollIntoView({
