@@ -1,17 +1,32 @@
+import { useScroll, useTransform } from 'motion/react'
+import * as motion from 'motion/react-client'
 import { memo } from 'react'
 import { getProjectById, PROJECTS_LIST } from '../../constants/projectList'
 import { useSelectedProject } from '../../Providers/SelectedProject'
 import ProjectLink from './ProjectLink'
 import ViewMore from './ViewMore'
-
 const SidePanel = () => {
-    const { activeId } = useSelectedProject()
+    const { scrollYProgress } = useScroll()
+    const scrollBarHeight = useTransform(scrollYProgress, [0, 1], ['0%', '100%'])
 
     return (
         <div className="sticky top-0 col-span-4 flex h-screen flex-col bg-black p-6 text-white">
             <SidePanelHeader />
 
             <SidePanelFooter />
+
+            <motion.div
+                id="scroll-indicator-vertical"
+                style={{
+                    position: 'fixed',
+                    top: 0,
+                    right: 0,
+                    width: 2,
+                    height: scrollBarHeight,
+                    borderRadius: `0 0 2px 2px`,
+                    backgroundColor: '#FFFFFF'
+                }}
+            />
         </div>
     )
 }
