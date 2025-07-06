@@ -1,1 +1,18 @@
 @import 'tailwindcss';
+
+@font-face {
+    font-family: FunnelDisplay;
+    src: url('../assets/fonts/FunnelDisplay-VariableFont_wght.ttf');
+}
+
+@layer base {
+    html {
+        -webkit-font-smoothing: antialiased;
+        /* font-family:; */
+        font-family: 'FunnelDisplay', sans-serif;
+    }
+}
+
+@theme {
+    --text-dynamic: clamp(10px, 16px, calc(14 * 0.125vh));
+}

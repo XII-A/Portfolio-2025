@@ -1,18 +1,19 @@
 import { useInView } from 'motion/react'
 import { useEffect, useRef } from 'react'
-import type { items } from '..'
+import type { Project } from '../../constants/projectList'
+import { useSelectedProject } from '../../Providers/SelectedProject'
+
 type Props = {
-    item: (typeof items)[keyof typeof items]
-    setActiveId: (id: keyof typeof items) => void
+    item: Project
 }
 
-const Item = (props: Props) => {
-    const { item, setActiveId } = props
+const ProjectCard = (props: Props) => {
+    const { item } = props
     const itemRef = useRef<HTMLDivElement>(null)
+    const { setActiveId } = useSelectedProject()
 
     const isInView = useInView(itemRef, {
         amount: 'all'
-        // margin: '50px 0px -50% 0px'
     })
 
     useEffect(() => {
@@ -29,4 +30,4 @@ const Item = (props: Props) => {
     )
 }
 
-export default Item
+export default ProjectCard
