@@ -16,7 +16,10 @@ function Index() {
                         className="flex h-screen items-center justify-center"
                         key={item.id}
                         style={{
-                            backgroundColor: `hsl(${(parseInt(item.id, 36) * 137) % 360}, 60%, 80%)`
+                            backgroundImage: `url(./SlickErp.png)`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                            backgroundRepeat: 'no-repeat'
                         }}
                     >
                         <ProjectCard item={item} />
