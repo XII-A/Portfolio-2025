@@ -1,7 +1,7 @@
 import { useInView } from 'motion/react'
 import { useEffect, useRef } from 'react'
-import type { Project } from '../../constants/projectList'
-import { useSelectedProject } from '../../Providers/SelectedProject'
+import type { Project } from '../../../constants/projectList'
+import { useSelectedProject } from '../../../Providers/SelectedProject'
 import Book from './Book'
 
 type Props = {

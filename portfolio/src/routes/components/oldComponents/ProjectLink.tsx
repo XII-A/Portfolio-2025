@@ -1,6 +1,6 @@
-import type { Project } from '../../constants/projectList'
-import { useSelectedProject } from '../../Providers/SelectedProject'
-import { cn } from '../../utils/cn'
+import type { Project } from '../../../constants/projectList'
+import { useSelectedProject } from '../../../Providers/SelectedProject'
+import { cn } from '../../../utils/cn'
 
 type Props = {
     item: Project

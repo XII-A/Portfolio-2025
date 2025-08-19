@@ -1,8 +1,8 @@
 import { useScroll, useTransform } from 'motion/react'
 import * as motion from 'motion/react-client'
 import { memo } from 'react'
-import { getProjectById, PROJECTS_LIST } from '../../constants/projectList'
-import { useSelectedProject } from '../../Providers/SelectedProject'
+import { getProjectById, PROJECTS_LIST } from '../../../constants/projectList'
+import { useSelectedProject } from '../../../Providers/SelectedProject'
 import ProjectLink from './ProjectLink'
 import ViewMore from './ViewMore'
 const SidePanel = () => {
