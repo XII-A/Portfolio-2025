@@ -29,3 +29,8 @@
     --heading-size: clamp(38px, 2.5vw, 3rem);
     --nav-button-font-size: clamp(24px, 30px, 1.8vw);
 }
+
+.text-fit {
+    font-size: 100cqh;
+    line-height: 1;
+}

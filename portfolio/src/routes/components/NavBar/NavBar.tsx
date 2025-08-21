@@ -18,7 +18,7 @@ const NavBar = () => {
                     key={`nav-bar-${index}`}
                     className={cn(
                         'hover:bg-secondary hover:text-primary',
-                        'last:bg-accent last:text-accent-foreground last:hover:bg-accent-secondary last:border-e-0'
+                        'last:bg-accent last:text-accent-foreground last:hover:bg-accent-secondary'
                     )}
                     href={item.toLowerCase()}
                     label={item}
