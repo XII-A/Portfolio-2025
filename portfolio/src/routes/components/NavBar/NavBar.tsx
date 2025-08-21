@@ -5,7 +5,7 @@ const NAV_BAR_ITEMS = ['Home', 'About', 'Skills', 'Projects', 'Contact']
 
 const NavBar = () => {
     return (
-        <div className="border-secondary col-span-full grid h-20 grid-cols-subgrid border-b">
+        <div className="border-secondary col-span-full grid h-[72px] grid-cols-subgrid border-b">
             <NavButton
                 key={`nav-bar-main`}
                 className={cn('bg-secondary text-primary hover:bg-primary hover:text-primary-foreground italic')}

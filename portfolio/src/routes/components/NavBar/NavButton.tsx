@@ -11,7 +11,7 @@ const NavButton = (props: Props) => {
     return (
         <button
             className={cn(
-                'text-primary-foreground border-secondary flex cursor-pointer items-center justify-center border-e text-3xl font-bold transition-colors duration-300',
+                'text-primary-foreground border-secondary flex cursor-pointer items-center justify-center border-e text-(length:--nav-button-font-size) font-bold transition-colors duration-300',
                 className
             )}
             onClick={() => {

@@ -25,4 +25,7 @@
     --color-accent-foreground: #1a1a1a;
     --color-accent-secondary: #10b981;
     --color-accent-secondary-foreground: #1a1a1a;
+    --center-to-navbar: calc((((100vw - (30px * 2)) / 6) / 2) - 21px);
+    --heading-size: clamp(38px, 2.5vw, 3rem);
+    --nav-button-font-size: clamp(24px, 30px, 1.8vw);
 }
