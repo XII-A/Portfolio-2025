@@ -5,10 +5,14 @@ const NAV_BAR_ITEMS = ['Home', 'About', 'Skills', 'Projects', 'Contact']
 
 const NavBar = () => {
     return (
-        <div className="border-secondary col-span-full grid h-[72px] grid-cols-subgrid border-b">
+        <div className="relative col-span-full grid h-[72px] grid-cols-subgrid rounded-none">
+            {/* border-b */}
+            <div className={cn('bg-secondary absolute start-0 end-0 bottom-0 h-px w-[calc(100%+0.25px)]')} />
             <NavButton
                 key={`nav-bar-main`}
-                className={cn('bg-secondary text-primary hover:bg-primary hover:text-primary-foreground italic')}
+                className={cn(
+                    'bg-secondary text-primary hover:bg-primary hover:text-primary-foreground border-s-0 italic'
+                )}
                 href="ar."
                 label={'ar.'}
             />
@@ -18,7 +22,7 @@ const NavBar = () => {
                     key={`nav-bar-${index}`}
                     className={cn(
                         'hover:bg-secondary hover:text-primary',
-                        'last:bg-accent last:text-accent-foreground last:hover:bg-accent-secondary'
+                        'last:bg-accent last:text-accent-foreground last:hover:bg-accent-secondary rounded-none last:w-[calc(100%+0.25px)]'
                     )}
                     href={item.toLowerCase()}
                     label={item}
