@@ -14,7 +14,7 @@ const SkillCard = ({ name, level, category }: { name: string; level: number; cat
     };
 
     return (
-        <div className="flex items-center gap-3 py-3  border-b-2 border-primary-foreground">
+        <div className="flex items-center gap-3 py-3 border-b-2 border-primary-foreground h-full">
             {/* Category Color Indicator */}
             <div
                 className="w-1 h-8"
@@ -25,7 +25,7 @@ const SkillCard = ({ name, level, category }: { name: string; level: number; cat
             />
 
             {/* Skill Info */}
-            <div className="flex-1">
+            <div className="flex-1 flex flex-col justify-center">
                 <div className="flex items-baseline justify-between mb-1">
                     <h3 className="font-sans text-lg font-bold uppercase tracking-tight">{name}</h3>
                     <span className="font-mono text-xs uppercase tracking-wider opacity-60">LV.{level}</span>
@@ -78,7 +78,7 @@ const SkillsSection = () => {
 
             {/* Skills Cards Section - 6 cols, 3 rows */}
             <div className="col-span-full row-span-3 p-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-14 md:gap-10 ">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-14 md:gap-10 h-full" style={{gridTemplateRows: 'repeat(auto-fit, minmax(0, 1fr))'}}>
                     <SkillCard name="JavaScript" level={5} category="languages" />
                     <SkillCard name="TypeScript" level={4} category="languages" />
                     <SkillCard name="Python" level={3} category="languages" />
