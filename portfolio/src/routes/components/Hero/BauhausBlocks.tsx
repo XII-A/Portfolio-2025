@@ -156,7 +156,7 @@ const BauhausBlocks = () => {
                     </text>
                 </svg>
             </div>
-            <div className="border-primary-foreground col-span-1 overflow-hidden border border-s-0 border-e-0 border-t-0">
+            <div className="border-primary-foreground col-span-1 overflow-hidden border border-s-0 border-e-0 border-t-0 border-b-0">
                 <svg
                     width="800px"
                     height="800px"
@@ -170,7 +170,7 @@ const BauhausBlocks = () => {
             </div>
 
             {/* 1 col 1 row  (D)*/}
-            <div className="border-primary-foreground col-span-1 col-start-5 row-span-1 overflow-hidden border border-s-0 border-e-0 border-t-0">
+            <div className="border-primary-foreground col-span-1 col-start-5 row-span-1 overflow-hidden ">
                 <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" className="block h-full w-full">
                     <text
                         x="50"

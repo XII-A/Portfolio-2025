@@ -11,12 +11,12 @@ const AboutSection = () => {
 
             {/* Profile Image Section - 2 cols, 3 rows */}
             <div className="col-span-2 row-span-3 border-r border-b flex items-center justify-center p-8">
-                <div className="relative w-48 h-48 bg-secondary border-4 border-primary-foreground">
+                <div className="relative w-64 h-64 bg-secondary border-4 border-primary-foreground">
                     {/* Placeholder for profile image */}
                     <div className="absolute inset-0 flex items-center justify-center">
                         <svg 
                             viewBox="0 0 100 100" 
-                            className="w-24 h-24 fill-current text-primary-foreground"
+                            className="w-32 h-32 fill-current text-primary-foreground"
                         >
                             <circle cx="50" cy="35" r="20"/>
                             <path d="M20 85 Q20 65 50 65 Q80 65 80 85"/>
@@ -29,7 +29,19 @@ const AboutSection = () => {
             </div>
 
             {/* About Text Section - 4 cols, 3 rows */}
-            <div className="col-span-4 row-span-3 border-b p-8 flex flex-col justify-center">
+            <div className="col-span-4 row-span-3 border-b p-8 flex flex-col justify-center relative">
+                {/* Industrial corner plus signs */}
+                <div className="absolute top-4 left-4 w-2 h-2 bg-primary-foreground rotate-45 border-2 border-primary-foreground">
+                </div>
+                <div className="absolute top-4 right-4 w-2 h-2 bg-primary-foreground rotate-45 border-2 border-primary-foreground">
+                </div>
+                <div className="absolute top-4 right-4 w-2 h-2 bg-primary-foreground rotate-45 border-2 border-primary-foreground">
+                </div>
+                <div className="absolute bottom-4 left-4 w-2 h-2 bg-primary-foreground rotate-45 border-2 border-primary-foreground">
+                </div>
+                <div className="absolute bottom-4 right-4 w-2 h-2 bg-primary-foreground rotate-45 border-2 border-primary-foreground">
+                </div>
+                
                 <div className="max-w-2xl">
                     <div className="text-2xl font-bold mb-4">ABDULRAZAK ARMANAZI</div>
                     <div className="text-lg leading-relaxed mb-6">
