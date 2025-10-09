@@ -1,5 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
-import AboutSection from './components/About/AboutSection'
+import AboutMe from './components/About/AboutMe'
+import SkillsSection from './components/About/SkillsSection'
 import Hero from './components/Hero/Hero'
 import NavBar from './components/NavBar/NavBar'
 
@@ -12,7 +13,8 @@ function Index() {
         <div className="bg-primary border-secondary mx-[30px] grid min-h-screen grid-cols-6 border-x p-0">
             <NavBar />
             <Hero />
-            <AboutSection />
+            <AboutMe />
+            <SkillsSection />
         </div>
     )
 }
