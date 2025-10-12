@@ -138,7 +138,7 @@ const WorkExperience = () => {
     }
 
     return (
-        <div className="text-primary-foreground col-span-full grid min-h-screen grid-cols-6 grid-rows-[auto_1fr_1fr_1fr_auto] border-t">
+        <div className="text-primary-foreground col-span-full grid  grid-cols-6 grid-rows-[auto_1fr_auto] border-t ">
             {/* Work Experience Header */}
             <SectionHeader
                 title="WORK"
@@ -151,7 +151,7 @@ const WorkExperience = () => {
             />
 
             {/* Experience List Section - 6 cols, 3 rows */}
-            <div className="col-span-full row-span-3">
+            <div className="col-span-full ">
                     <Accordion
                         type="single"
                         collapsible
