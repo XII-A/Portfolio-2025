@@ -1,13 +1,13 @@
+import SectionHeader from '../SectionHeader'
+
 const AboutMe = () => {
     return (
-        <div className="text-primary-foreground col-span-full grid min-h-screen grid-cols-6 grid-rows-4 border-t">
-            {/* Header Section - 6 cols, 1 row */}
-            <div className="col-span-full flex items-center justify-center border-b">
-                <div className="text-center">
-                    <div className="text-4xl font-bold mb-2">ABOUT</div>
-                    <div className="text-lg font-medium">me</div>
-                </div>
-            </div>
+        <div className="text-primary-foreground col-span-full grid min-h-screen grid-cols-6 grid-rows-[auto_1fr_1fr_1fr_auto] border-t">
+            {/* About Header */}
+            <SectionHeader 
+                title="ABOUT"
+                subtitle="me"
+            />
 
             {/* Profile Image Section - 2 cols, 3 rows */}
             <div className="col-span-2 row-span-3 border-r border-b flex items-center justify-center p-8">

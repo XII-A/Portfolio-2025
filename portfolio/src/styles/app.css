@@ -29,9 +29,35 @@
     --color-skill-frameworks: oklch(0.45 0.15 264);
     --color-skill-tools: oklch(0.85 0.15 85);
     --color-skill-empty: oklch(0.7 0.01 269);
+    --color-work-work: oklch(0.55 0.22 27);
+    --color-work-freelance: oklch(0.45 0.15 264);
+    --color-work-education: oklch(0.85 0.15 85);
     --center-to-navbar: calc((((100vw - (30px * 2)) / 6) / 2) - 21px);
     --heading-size: clamp(38px, 2.5vw, 3rem);
     --nav-button-font-size: clamp(24px, 30px, 1.8vw);
+
+    /* for shadcn accordion */
+
+    @keyframes accordion-down {
+        0% {
+          height: 0;
+        }
+        100% {
+          height: var(--radix-accordion-content-height);
+        }
+      }
+    
+      @keyframes accordion-up {
+        0% {
+          height: var(--radix-accordion-content-height);
+        }
+        100% {
+          height: 0;
+        }
+      }
+    
+      --animate-accordion-down: accordion-down 0.2s ease-out;
+      --animate-accordion-up: accordion-up 0.2s ease-out;
 }
 
 .text-fit {

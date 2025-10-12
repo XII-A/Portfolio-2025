@@ -1,3 +1,5 @@
+import SectionHeader from '../SectionHeader';
+
 // SkillCard Component
 const SkillCard = ({ name, level, category }: { name: string; level: number; category: 'languages' | 'frameworks' | 'tools' }) => {
     const getCategoryColorValue = (cat: string) => {
@@ -52,29 +54,17 @@ const SkillCard = ({ name, level, category }: { name: string; level: number; cat
 
 const SkillsSection = () => {
     return (
-        <div className="text-primary-foreground col-span-full grid min-h-screen grid-cols-6 grid-rows-4 ">
-            {/* Skills Header - 6 cols, 1 row */}
-            <div className="col-span-full flex items-center justify-center border-b py-4">
-                <div className="text-center">
-                    <div className="text-4xl font-bold mb-2">SKILLS</div>
-                    <div className="text-lg font-medium">& TOOLS</div>
-                    {/* Color Legend */}
-                    <div className="flex justify-center space-x-6 mt-4 text-sm">
-                        <div className="flex items-center">
-                            <div className="w-4 h-4 mr-2" style={{backgroundColor: 'var(--color-skill-languages)'}}></div>
-                            <span>Languages</span>
-                        </div>
-                        <div className="flex items-center">
-                            <div className="w-4 h-4 mr-2" style={{backgroundColor: 'var(--color-skill-frameworks)'}}></div>
-                            <span>Frameworks</span>
-                        </div>
-                        <div className="flex items-center">
-                            <div className="w-4 h-4 mr-2" style={{backgroundColor: 'var(--color-skill-tools)'}}></div>
-                            <span>Tools</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div className="text-primary-foreground col-span-full grid min-h-screen grid-cols-6 grid-rows-[auto_1fr_1fr_1fr_auto]">
+            {/* Skills Header */}
+            <SectionHeader 
+                title="SKILLS"
+                subtitle="& TOOLS"
+                legend={[
+                    { label: 'Languages', color: 'var(--color-skill-languages)' },
+                    { label: 'Frameworks', color: 'var(--color-skill-frameworks)' },
+                    { label: 'Tools', color: 'var(--color-skill-tools)' }
+                ]}
+            />
 
             {/* Skills Cards Section - 6 cols, 3 rows */}
             <div className="col-span-full row-span-3 p-6">
