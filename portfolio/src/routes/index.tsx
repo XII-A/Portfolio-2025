@@ -1,5 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 import AboutMe from './components/About/AboutMe'
+import ContactFooter from './components/About/ContactFooter'
 import SkillsSection from './components/About/SkillsSection'
 import WorkExperience from './components/About/WorkExperience'
 import Hero from './components/Hero/Hero'
@@ -17,6 +18,7 @@ function Index() {
             <AboutMe />
             <SkillsSection />
             <WorkExperience />
+            <ContactFooter />
         </div>
     )
 }
