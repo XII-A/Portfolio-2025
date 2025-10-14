@@ -4,15 +4,13 @@ import { cn } from '../../../utils/cn'
 import { NAV_BAR_ITEMS } from './NavBar'
 import NavButton from './NavButton'
 
-type Props = {}
-
-const MobileNavBar = (props: Props) => {
+const MobileNavBar = () => {
     const [isOpen, setIsOpen] = useState(false)
     const [hasAnimationEnded, setHasAnimationEnded] = useState(true)
 
     return (
         <>
-            <div className="bg-primary sticky top-0 z-10 col-span-full flex h-[72px] flex-row border-b md:hidden">
+            <div className="bg-primary sticky top-0 z-10 col-span-full flex h-[72px] flex-row border-b lg:hidden">
                 <NavButton
                     key={`nav-bar-main`}
                     className={cn(
@@ -43,7 +41,10 @@ const MobileNavBar = (props: Props) => {
                 onAnimationEnd={() => setHasAnimationEnded(true)}
             >
                 <Drawer.Portal>
-                    <Drawer.Content className="fixed top-[70px] bottom-0 z-10 flex w-dvw outline-none">
+                    <Drawer.Content
+                        className="fixed top-[70px] bottom-0 z-10 flex w-dvw outline-none md:right-[30px] md:w-[calc(100vw-60px)]"
+                        style={{ '--initial-transform': 'calc(100% + 30px)' } as React.CSSProperties}
+                    >
                         <div className="bg-secondary flex h-full w-full grow flex-col p-5">
                             <div className="flex h-1/2 w-full flex-col justify-evenly">
                                 {NAV_BAR_ITEMS.map((item, index) => (

@@ -7,7 +7,7 @@ export const NAV_BAR_ITEMS = ['Home', 'About', 'Skills', 'Projects', 'Contact']
 const NavBar = () => {
     return (
         <>
-            <div className="relative col-span-full hidden h-[72px] grid-cols-subgrid rounded-none md:grid">
+            <div className="relative col-span-full hidden h-[72px] grid-cols-subgrid rounded-none lg:grid">
                 {/* border-b */}
                 <div className={cn('bg-secondary absolute start-0 end-0 bottom-0 h-px w-[calc(100%+0.25px)]')} />
                 <NavButton
