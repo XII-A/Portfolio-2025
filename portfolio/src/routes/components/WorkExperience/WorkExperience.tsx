@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import SectionHeader from '../SectionHeader'
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion'
+import SectionHeader from '../shared/SectionHeader'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../shared/ui/accordion'
 
 // ExperienceBar Component
 const ExperienceBar = ({
@@ -10,7 +10,7 @@ const ExperienceBar = ({
     dates,
     category,
     description,
-    isExpanded,
+    isExpanded
 }: {
     id: string
     company: string
@@ -34,42 +34,40 @@ const ExperienceBar = ({
     }
 
     return (
-           
-            <AccordionItem value={id} key={id} className="flex h-full w-full flex-col ">
-                <AccordionTrigger 
-                    className={`flex flex-1 cursor-pointer items-center gap-4 px-6 py-4 transition-all duration-300 rounded-none  ${
-                        isExpanded ? 'text-white' : 'text-primary-foreground'
-                    }`}
+        <AccordionItem value={id} key={id} className="flex h-full w-full flex-col">
+            <AccordionTrigger
+                className={`flex flex-1 cursor-pointer items-center gap-4 rounded-none px-6 py-4 transition-all duration-300 ${
+                    isExpanded ? 'text-white' : 'text-primary-foreground'
+                }`}
+                style={{
+                    backgroundColor: isExpanded ? getCategoryColorValue(category) : 'transparent'
+                }}
+            >
+                {/* Category Color Indicator */}
+                <div
+                    className="h-12 w-2"
                     style={{
-                        backgroundColor: isExpanded ? getCategoryColorValue(category) : 'transparent'
+                        backgroundColor: isExpanded ? 'white' : getCategoryColorValue(category)
                     }}
-                >
-                    
-                        {/* Category Color Indicator */}
-                        <div
-                            className="h-12 w-2"
-                            style={{
-                                backgroundColor: isExpanded ? 'white' : getCategoryColorValue(category)
-                            }}
-                        />
+                />
 
-                        {/* Experience Info */}
-                        <div className="flex flex-1 items-center justify-between">
-                            <div>
-                                <h3 className="font-sans text-lg font-bold tracking-tight uppercase">{company}</h3>
-                                <p className="text-sm opacity-80">{role}</p>
-                            </div>
-                            <div className="text-right">
-                                <span className="font-mono text-sm tracking-wider uppercase">{dates}</span>
-                            </div>
-                        </div>
-                </AccordionTrigger>
-                <AccordionContent className='AccordionContent'>
-                    <div className="px-6 py-4">
-                        <p className="text-primary-foreground text-sm leading-relaxed">{description}</p>
+                {/* Experience Info */}
+                <div className="flex flex-1 items-center justify-between">
+                    <div>
+                        <h3 className="font-sans text-lg font-bold tracking-tight uppercase">{company}</h3>
+                        <p className="text-sm opacity-80">{role}</p>
                     </div>
-                </AccordionContent>
-            </AccordionItem>
+                    <div className="text-right">
+                        <span className="font-mono text-sm tracking-wider uppercase">{dates}</span>
+                    </div>
+                </div>
+            </AccordionTrigger>
+            <AccordionContent className="AccordionContent">
+                <div className="px-6 py-4">
+                    <p className="text-primary-foreground text-sm leading-relaxed">{description}</p>
+                </div>
+            </AccordionContent>
+        </AccordionItem>
     )
 }
 
@@ -138,7 +136,7 @@ const WorkExperience = () => {
     }
 
     return (
-        <div className="text-primary-foreground col-span-full grid  grid-cols-6 grid-rows-[auto_1fr_auto] border-t ">
+        <div className="text-primary-foreground col-span-full grid grid-cols-6 grid-rows-[auto_1fr_auto] border-t">
             {/* Work Experience Header */}
             <SectionHeader
                 title="WORK"
@@ -151,26 +149,25 @@ const WorkExperience = () => {
             />
 
             {/* Experience List Section - 6 cols, 3 rows */}
-            <div className="col-span-full ">
-                    <Accordion
-                        type="single"
-                        collapsible
-                        value={expandedExperience ?? undefined}
-                        onValueChange={handleExperienceClick}
-                    >
-                        {experiences.map((experience, index) => (
-                            
-                                <ExperienceBar
-                                    id={experience.id}
-                                    company={experience.company}
-                                    role={experience.role}
-                                    dates={experience.dates}
-                                    category={experience.category}
-                                    description={experience.description}
-                                    isExpanded={expandedExperience === experience.id}
-                                />
-                        ))}
-                    </Accordion>
+            <div className="col-span-full">
+                <Accordion
+                    type="single"
+                    collapsible
+                    value={expandedExperience ?? undefined}
+                    onValueChange={handleExperienceClick}
+                >
+                    {experiences.map((experience, index) => (
+                        <ExperienceBar
+                            id={experience.id}
+                            company={experience.company}
+                            role={experience.role}
+                            dates={experience.dates}
+                            category={experience.category}
+                            description={experience.description}
+                            isExpanded={expandedExperience === experience.id}
+                        />
+                    ))}
+                </Accordion>
             </div>
 
             {/* Experience Summary Footer */}

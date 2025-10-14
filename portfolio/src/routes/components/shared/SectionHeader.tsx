@@ -9,18 +9,15 @@ interface SectionHeaderProps {
 
 const SectionHeader = ({ title, subtitle, legend }: SectionHeaderProps) => {
     return (
-        <div className="col-span-full flex items-center justify-center border-b py-4 max-h-36 h-36">
+        <div className="col-span-full flex h-36 max-h-36 items-center justify-center border-b py-4">
             <div className="text-center">
-                <div className="text-4xl font-bold mb-2">{title}</div>
+                <div className="mb-2 text-4xl font-bold">{title}</div>
                 {subtitle && <div className="text-lg font-medium">{subtitle}</div>}
                 {legend && (
-                    <div className="flex justify-center space-x-6 mt-4 text-sm">
+                    <div className="mt-4 flex justify-center space-x-6 text-sm">
                         {legend.map((item, index) => (
                             <div key={index} className="flex items-center">
-                                <div 
-                                    className="w-4 h-4 mr-2" 
-                                    style={{backgroundColor: item.color}}
-                                ></div>
+                                <div className="mr-2 h-4 w-4" style={{ backgroundColor: item.color }}></div>
                                 <span>{item.label}</span>
                             </div>
                         ))}
