@@ -1,24 +1,30 @@
 import { cn } from '../../../utils/cn'
 
-type Props = {
-    label: string
+interface DefaultProps {
     href: string
     className: string
+    onClick?: () => void
 }
 
+type Props =
+    | (DefaultProps & {
+          label: string
+      })
+    | (DefaultProps & {
+          children: React.ReactNode
+      })
+
 const NavButton = (props: Props) => {
-    const { label, href, className } = props
+    const { href, className, onClick } = props
     return (
         <button
             className={cn(
                 'text-primary-foreground border-secondary flex cursor-pointer items-center justify-center border-s text-(length:--nav-button-font-size) font-bold transition-colors duration-300',
                 className
             )}
-            onClick={() => {
-                console.log(href)
-            }}
+            onClick={onClick}
         >
-            {label}
+            {'label' in props ? props.label : props.children}
         </button>
     )
 }
