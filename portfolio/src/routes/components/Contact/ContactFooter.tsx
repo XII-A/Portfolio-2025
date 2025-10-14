@@ -27,17 +27,19 @@ const socialMedia = [
 const ContactFooter = () => {
     return (
         <div className="col-span-full">
-            <div className="text-primary-foreground bg-primary relative z-10 col-span-full grid grid-cols-6 border-t md:pt-[72px]">
-                <div className="col-span-full flex flex-col gap-7 px-3 md:contents">
-                    <div className="col-span-1 mt-10 md:ps-8">
+            <div className="text-primary-foreground bg-primary relative z-10 col-span-full grid grid-cols-6 border-t lg:pt-[72px]">
+                <div className="col-span-full flex flex-col gap-7 px-3 lg:contents">
+                    <div className="col-span-1 mt-10 lg:mt-3 lg:ps-8">
                         <div className="text-lg font-bold">Get in touch:</div>
                     </div>
-                    <div className="md:col-span-5">
-                        <div className="text-3xl leading-none font-bold md:text-[100px]">
+                    <div className="lg:col-span-5">
+                        <div className="text-3xl leading-none font-bold lg:text-(length:--footer-heading-size)">
                             If you'd like to chat, you can reach me at:
                         </div>
 
-                        <div className="text-accent mt-4 text-3xl font-bold md:text-8xl">ar.armanazi@gmail.com</div>
+                        <div className="text-accent mt-4 text-3xl font-bold lg:text-(length:--footer-heading-size)">
+                            ar.armanazi@gmail.com
+                        </div>
                     </div>
                 </div>
 
