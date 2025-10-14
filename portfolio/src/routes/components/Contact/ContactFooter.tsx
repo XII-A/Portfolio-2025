@@ -27,18 +27,21 @@ const socialMedia = [
 const ContactFooter = () => {
     return (
         <div className="col-span-full">
-            <div className="text-primary-foreground bg-primary relative z-10 col-span-full grid grid-cols-6 border-t pt-[72px]">
-                <div className="col-span-1 mt-4 ps-8">
-                    <div className="text-lg font-bold">Get in touch:</div>
-                </div>
-                <div className="col-span-5">
-                    <div className="text-[100px] leading-none font-bold whitespace-pre-wrap">
-                        If you'd like to chat, you can reach me at:
+            <div className="text-primary-foreground bg-primary relative z-10 col-span-full grid grid-cols-6 border-t md:pt-[72px]">
+                <div className="col-span-full flex flex-col gap-7 px-3 md:contents">
+                    <div className="col-span-1 mt-10 md:ps-8">
+                        <div className="text-lg font-bold">Get in touch:</div>
                     </div>
+                    <div className="md:col-span-5">
+                        <div className="text-3xl leading-none font-bold md:text-[100px]">
+                            If you'd like to chat, you can reach me at:
+                        </div>
 
-                    <div className="text-accent mt-10 text-8xl font-bold">ar.armanazi@gmail.com</div>
+                        <div className="text-accent mt-4 text-3xl font-bold md:text-8xl">ar.armanazi@gmail.com</div>
+                    </div>
                 </div>
-                <div className="relative col-span-full mt-10 grid grid-cols-4 border-y">
+
+                <div className="relative col-span-full mt-12 grid grid-cols-4 border-y">
                     {socialMedia.map(({ Icon, url, color }) => (
                         <a
                             href={url}
@@ -66,7 +69,7 @@ const ContactFooter = () => {
 
             <div className="bg-accent-foreground sticky bottom-0 left-0 z-0 col-span-full flex h-40 w-full items-center justify-center">
                 <div className="text-primary relative flex h-full w-full items-start justify-end overflow-hidden px-12 py-12 text-right">
-                    <h2 className="text-primary absolute bottom-0 left-0 translate-y-1/3 text-[80px] italic sm:text-[192px]">
+                    <h2 className="text-primary absolute bottom-0 left-0 text-[80px] italic sm:translate-y-1/3 sm:text-[192px]">
                         ar.
                     </h2>
                 </div>

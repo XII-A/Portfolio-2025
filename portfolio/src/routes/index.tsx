@@ -12,7 +12,7 @@ export const Route = createFileRoute('/')({
 
 function Index() {
     return (
-        <div className="bg-primary border-secondary mx-[30px] grid min-h-screen grid-cols-6 border-x p-0">
+        <div className="bg-primary border-secondary grid min-h-screen grid-cols-6 border-x p-0 md:mx-[30px]">
             <NavBar />
             <Hero />
             <AboutMe />
