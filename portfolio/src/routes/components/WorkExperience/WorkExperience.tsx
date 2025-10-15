@@ -165,6 +165,7 @@ const WorkExperience = () => {
                             category={experience.category}
                             description={experience.description}
                             isExpanded={expandedExperience === experience.id}
+                            key={experience.id}
                         />
                     ))}
                 </Accordion>
