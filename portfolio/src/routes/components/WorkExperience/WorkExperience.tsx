@@ -54,17 +54,19 @@ const ExperienceBar = ({
                 {/* Experience Info */}
                 <div className="flex flex-1 items-center justify-between">
                     <div>
-                        <h3 className="font-sans text-lg font-bold tracking-tight uppercase">{company}</h3>
+                        <h3 className="font-sans text-base font-bold tracking-tight uppercase sm:text-lg">{company}</h3>
                         <p className="text-sm opacity-80">{role}</p>
                     </div>
                     <div className="text-right">
-                        <span className="font-mono text-sm tracking-wider uppercase">{dates}</span>
+                        <span className="font-mono text-xs tracking-wider whitespace-nowrap uppercase sm:text-sm">
+                            {dates}
+                        </span>
                     </div>
                 </div>
             </AccordionTrigger>
             <AccordionContent className="AccordionContent">
                 <div className="px-6 py-4">
-                    <p className="text-primary-foreground text-sm leading-relaxed">{description}</p>
+                    <p className="text-primary-foreground text-xs leading-relaxed sm:text-sm">{description}</p>
                 </div>
             </AccordionContent>
         </AccordionItem>
@@ -173,29 +175,29 @@ const WorkExperience = () => {
 
             {/* Experience Summary Footer */}
             <div className="col-span-full row-span-1 grid grid-cols-4 border-t">
-                <div className="border-primary-foreground flex flex-col justify-center border-r p-4 text-center">
-                    <div className="text-3xl font-bold" style={{ color: 'var(--color-work-work)' }}>
+                <div className="border-primary-foreground flex flex-col justify-center border-r px-2 py-4 text-center sm:p-4">
+                    <div className="text-2xl font-bold sm:text-3xl" style={{ color: 'var(--color-work-work)' }}>
                         6
                     </div>
-                    <div className="text-base">Total Positions</div>
+                    <div className="text-sm sm:text-base">Total</div>
                 </div>
-                <div className="border-primary-foreground flex flex-col justify-center border-r p-4 text-center">
-                    <div className="text-3xl font-bold" style={{ color: 'var(--color-work-freelance)' }}>
+                <div className="border-primary-foreground flex flex-col justify-center border-r px-2 py-4 text-center sm:p-4">
+                    <div className="text-2xl font-bold sm:text-3xl" style={{ color: 'var(--color-work-freelance)' }}>
                         4+
                     </div>
-                    <div className="text-base">Years Experience</div>
+                    <div className="text-sm sm:text-base">Years Exp</div>
                 </div>
-                <div className="border-primary-foreground flex flex-col justify-center border-r p-4 text-center">
-                    <div className="text-3xl font-bold" style={{ color: 'var(--color-work-education)' }}>
+                <div className="border-primary-foreground flex flex-col justify-center border-r px-2 py-4 text-center sm:p-4">
+                    <div className="text-2xl font-bold sm:text-3xl" style={{ color: 'var(--color-work-education)' }}>
                         4
                     </div>
-                    <div className="text-base">Companies</div>
+                    <div className="text-sm sm:text-base">Companies</div>
                 </div>
-                <div className="flex flex-col justify-center p-4 text-center">
-                    <div className="text-3xl font-bold" style={{ color: 'var(--color-accent)' }}>
+                <div className="flex flex-col justify-center px-2 py-4 text-center sm:p-4">
+                    <div className="text-2xl font-bold sm:text-3xl" style={{ color: 'var(--color-accent)' }}>
                         2
                     </div>
-                    <div className="text-base">Projects</div>
+                    <div className="text-sm sm:text-base">Projects</div>
                 </div>
             </div>
         </div>

@@ -100,29 +100,33 @@ const SkillsSection = () => {
 
             {/* Skill Summary Footer */}
             <div className="col-span-full row-span-1 grid grid-cols-4 border-t">
-                <div className="border-primary-foreground flex flex-col justify-center border-r p-4 text-center">
-                    <div className="text-3xl font-bold" style={{ color: 'var(--color-skill-languages)' }}>
+                <div className="border-primary-foreground flex flex-col justify-center border-r px-2 py-4 text-center sm:p-4">
+                    <div className="text-2xl font-bold sm:text-3xl" style={{ color: 'var(--color-skill-languages)' }}>
                         16
                     </div>
-                    <div className="text-base">Total Skills</div>
+                    <div className="text-sm sm:text-base">Total Skills</div>
                 </div>
-                <div className="border-primary-foreground flex flex-col justify-center border-r p-4 text-center">
-                    <div className="text-3xl font-bold" style={{ color: 'var(--color-skill-frameworks)' }}>
+                <div className="border-primary-foreground flex flex-col justify-center border-r px-2 py-4 text-center sm:p-4">
+                    <div className="text-2xl font-bold sm:text-3xl" style={{ color: 'var(--color-skill-frameworks)' }}>
                         5
                     </div>
-                    <div className="text-base">Expert Level</div>
+                    <div className="text-sm sm:text-base">
+                        Expert L<span className="hidden sm:inline">e</span>v<span className="hidden sm:inline">e</span>l
+                    </div>
                 </div>
-                <div className="border-primary-foreground flex flex-col justify-center border-r p-4 text-center">
-                    <div className="text-3xl font-bold" style={{ color: 'var(--color-skill-tools)' }}>
+                <div className="border-primary-foreground flex flex-col justify-center border-r px-2 py-4 text-center sm:p-4">
+                    <div className="text-2xl font-bold sm:text-3xl" style={{ color: 'var(--color-skill-tools)' }}>
                         82%
                     </div>
-                    <div className="text-base">Avg Mastery</div>
+                    <div className="text-sm sm:text-base">
+                        <span className="hidden sm:inline">Avg </span>Mastery
+                    </div>
                 </div>
-                <div className="flex flex-col justify-center p-4 text-center">
-                    <div className="text-3xl font-bold" style={{ color: 'var(--color-accent)' }}>
+                <div className="flex flex-col justify-center px-2 py-4 text-center sm:p-4">
+                    <div className="text-2xl font-bold sm:text-3xl" style={{ color: 'var(--color-accent)' }}>
                         3+
                     </div>
-                    <div className="text-base">Years Exp</div>
+                    <div className="text-sm sm:text-base">Years Exp</div>
                 </div>
             </div>
         </div>
