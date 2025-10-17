@@ -1,40 +1,44 @@
+import { AtomIcon, FlaskIcon, FramerLogoIcon, LightbulbIcon, SparkleIcon } from '@phosphor-icons/react'
+
 const BauhausBlocks = () => {
     return (
-        <div className="text-primary-foreground col-span-3 grid h-full grid-cols-5 grid-rows-4 border-s">
+        <div className="text-primary-foreground col-span-full grid h-full grid-cols-5 grid-rows-4 border-s-0 border-b lg:col-span-3 lg:border-s lg:border-b-0">
             {/* B */}
-            <div className="border-primary-foreground col-span-1 overflow-hidden border border-s-0 border-e-0 border-t-0">
-                <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" className="block h-full w-full">
-                    <text
-                        x="50"
-                        y="63%"
-                        textAnchor="middle"
-                        dominantBaseline="middle"
-                        fontSize="150"
-                        className="fill-current"
-                    >
-                        B
-                    </text>
-                </svg>
+            <div className="border-primary-foreground relative col-span-1 grid place-items-center overflow-visible border border-s-0 border-e-0 border-t-0">
+                <div className="border-primary-foreground flex aspect-square w-full items-center justify-center rounded-full border-3 border-dashed">
+                    <FramerLogoIcon className="size-20" weight="duotone" />
+                </div>
+
+                {/* circle at the center right */}
+                <div
+                    className="bg-primary-foreground absolute end-0 bottom-1/2 z-10 size-4 rounded-full"
+                    style={{
+                        transform: 'translateY(50%) translateX(50%)'
+                    }}
+                />
             </div>
 
             {/* 1 col 2 rows down right */}
-            <div className="border-primary-foreground col-span-1 row-span-2 border border-t-0">
-                <svg
-                    width="800"
-                    height="1371"
-                    viewBox="0 0 800 1371"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="block h-full w-full"
-                >
-                    <path
-                        d="M433.333 937.667L600 1104.33M600 1104.33L433.333 1271M600 1104.33H339.896C302.633 1104.33 283.973 1104.33 269.726 1097.07C257.182 1090.68 246.991 1080.46 240.599 1067.92C233.333 1053.66 233.333 1035 233.333 997.667V33.5"
-                        stroke="#454545"
-                        stroke-width="66.6667"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                    />
-                </svg>
+            <div className="border-primary-foreground col-span-1 row-span-2 grid grid-rows-2 border border-t-0">
+                {/* line connecting  the two circles */}
+
+                {/* first circle */}
+                <div className="relative h-full w-full">
+                    {/* line from dot to center */}
+                    <div className="bg-primary-foreground absolute bottom-1/2 h-0.5 w-1/2" />
+
+                    {/* line from center to bottom */}
+                    <div className="bg-primary-foreground absolute end-1/2 h-full w-0.5 translate-y-1/2" />
+                </div>
+
+                {/* second circle */}
+                <div className="relative h-full w-full">
+                    {/* line from dot to center */}
+                    <div className="bg-primary-foreground absolute end-0 bottom-1/2 h-0.5 w-1/2" />
+
+                    {/* line from center to bottom */}
+                    <div className="bg-primary-foreground absolute end-1/2 h-1/2 w-0.5 translate-y-full" />
+                </div>
             </div>
 
             {/* 2 cols 1 row (shipping) */}
@@ -51,138 +55,72 @@ const BauhausBlocks = () => {
                             textAnchor="middle"
                             dominantBaseline="middle"
                         >
-                            shipping
+                            creativity
                         </text>
                     </g>
                 </svg>
             </div>
 
             {/* 1 col 1 row  (star)*/}
-            <div className="border-primary-foreground col-span-1 overflow-hidden border border-s-0 border-e-0 border-t-0">
-                <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" className="block h-full w-full">
-                    <text
-                        x="50"
-                        y="63%"
-                        textAnchor="middle"
-                        dominantBaseline="middle"
-                        fontSize="150"
-                        className="fill-current"
-                    >
-                        ✴
-                    </text>
-                </svg>
+            <div className="border-primary-foreground col-span-1 grid place-items-center overflow-hidden border border-s-0 border-e-0 border-t-0">
+                <LightbulbIcon className="size-20" weight="duotone" />
             </div>
 
             {/* 1 col 1 row  (U)*/}
-            <div className="border-primary-foreground col-span-1 row-span-1 overflow-hidden border border-s-0 border-e-0 border-t-0">
-                <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" className="block h-full w-full">
-                    <text
-                        x="50"
-                        y="63%"
-                        textAnchor="middle"
-                        dominantBaseline="middle"
-                        fontSize="150"
-                        className="fill-current"
-                    >
-                        U
-                    </text>
-                </svg>
+            <div className="border-primary-foreground relative col-span-1 row-span-1 grid place-items-center overflow-visible border border-s-0 border-t-0">
+                <div className="border-primary-foreground flex aspect-square w-full items-center justify-center rounded-full border-3 border-dashed">
+                    <AtomIcon className="size-20" weight="duotone" />
+                </div>
+                {/* circle at the center left */}
+                <div
+                    className="bg-primary-foreground absolute start-0 bottom-1/2 z-10 size-4 rounded-full"
+                    style={{
+                        transform: 'translateY(50%) translateX(-50%)'
+                    }}
+                />
             </div>
 
             {/* 1 col 1 row  (I)*/}
-            <div className="border-primary-foreground col-span-1 row-span-1 overflow-hidden border border-s-0 border-t-0">
-                <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" className="block h-full w-full">
-                    <text
-                        x="50"
-                        y="63%"
-                        textAnchor="middle"
-                        dominantBaseline="middle"
-                        fontSize="150"
-                        className="fill-current"
-                    >
-                        I
-                    </text>
-                </svg>
+            <div className="border-primary-foreground col-span-1 row-span-1 grid place-items-center overflow-hidden border border-s-0 border-t-0">
+                <FlaskIcon className="size-20" weight="duotone" />
             </div>
 
             {/* 1 col 2 rows  (↓) */}
-            <div className="border-primary-foreground col-span-1 row-span-2 border border-s-0 border-e-0 border-t-0">
-                <svg
-                    width="800"
-                    height="1371"
-                    viewBox="0 0 800 1371"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="block h-full w-full rotate-y-180"
-                >
-                    <path
-                        d="M433.333 937.667L600 1104.33M600 1104.33L433.333 1271M600 1104.33H339.896C302.633 1104.33 283.973 1104.33 269.726 1097.07C257.182 1090.68 246.991 1080.46 240.599 1067.92C233.333 1053.66 233.333 1035 233.333 997.667V33.5"
-                        stroke="#454545"
-                        stroke-width="66.6667"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                    />
-                </svg>
+            <div className="border-primary-foreground relative col-span-1 row-span-2 border border-s-0 border-e-0 border-t-0">
+                {/* circle at top center */}
+                <div
+                    className="bg-primary-foreground absolute top-0 left-1/2 z-10 size-4 rounded-full"
+                    style={{
+                        transform: 'translateX(-50%) translateY(-50%)'
+                    }}
+                />
+
+                <div className="border-primary-foreground absolute h-[75%] w-1/2 border-r-2 border-b-2" />
+
+                <div className="bg-primary-foreground absolute end-1/2 bottom-0 h-[25%] w-0.5" />
             </div>
 
-            {/* 1 col 1 row  (L)*/}
-            <div className="border-primary-foreground col-span-1 row-span-1 overflow-hidden border border-s-0 border-e-0 border-t-0">
-                <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" className="block h-full w-full">
-                    <text
-                        x="50"
-                        y="63%"
-                        textAnchor="middle"
-                        dominantBaseline="middle"
-                        fontSize="150"
-                        className="fill-current"
-                    >
-                        L
-                    </text>
-                </svg>
-            </div>
-
-            {/* 2 col 2 rows  (--__--)*/}
-            <div className="border-primary-foreground col-span-3 row-span-2 overflow-hidden border border-t-0 border-b-0">
-                <svg preserveAspectRatio="xMidYMid meet" className="block h-full w-full">
-                    <text
-                        x="50%"
-                        y="50%"
-                        textAnchor="middle"
-                        dominantBaseline="middle"
-                        fontSize="150"
-                        className="fill-current"
-                    >
-                        {'--__--'}
-                    </text>
-                </svg>
-            </div>
-            <div className="border-primary-foreground col-span-1 overflow-hidden border border-s-0 border-e-0 border-t-0 border-b-0">
-                <svg
-                    width="800px"
-                    height="800px"
-                    viewBox="0 0 32 32"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="block h-full w-full fill-current"
-                >
-                    <title>caret-down-left</title>
-                    <path d="M23.602 22.539l-14.143-14.141c-0.136-0.136-0.323-0.22-0.531-0.22-0.414 0-0.75 0.336-0.75 0.75 0 0 0 0.001 0 0.001v-0 14.142c0 0.414 0.336 0.75 0.75 0.75h14.142c0.415-0 0.751-0.336 0.751-0.751 0-0.207-0.084-0.395-0.22-0.53v0zM9.679 22.32v-11.581l11.581 11.581z"></path>
-                </svg>
+            <div className="border-primary-foreground col-span-4 row-span-2 overflow-hidden border border-s-0 border-t-0 border-b-0 p-4">
+                {/* your website */}
+                <div className="flex h-full w-full flex-col items-start justify-center">
+                    <div className="bg-primary-foreground text-primary w-full px-2 py-1 text-sm font-medium">
+                        Your Website
+                    </div>
+                    <div className="flex h-full w-full items-center justify-center border">Hello World</div>
+                </div>
             </div>
 
             {/* 1 col 1 row  (D)*/}
-            <div className="border-primary-foreground col-span-1 col-start-5 row-span-1 overflow-hidden ">
-                <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" className="block h-full w-full">
-                    <text
-                        x="50"
-                        y="63%"
-                        textAnchor="middle"
-                        dominantBaseline="middle"
-                        fontSize="150"
-                        className="fill-current"
-                    >
-                        D
-                    </text>
-                </svg>
+            <div className="border-primary-foreground relative col-span-1 col-start-5 row-span-1 grid place-items-start overflow-visible">
+                <div className="border-primary-foreground bg-primary flex aspect-square w-full items-center justify-center rounded-full border-3 border-dashed">
+                    <SparkleIcon className="size-20" weight="duotone" />
+                </div>
+                <div
+                    className="bg-primary-foreground absolute end-1/2 top-0 size-4 rounded-full"
+                    style={{
+                        transform: 'translateY(-50%) translateX(45%)'
+                    }}
+                />
             </div>
         </div>
     )
