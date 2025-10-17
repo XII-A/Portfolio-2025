@@ -61,7 +61,10 @@ const SkillCard = ({
 
 const SkillsSection = () => {
     return (
-        <div className="text-primary-foreground col-span-full grid min-h-screen grid-cols-6 grid-rows-[auto_1fr_1fr_1fr_auto]">
+        <div
+            id="skills"
+            className="text-primary-foreground col-span-full grid min-h-screen grid-cols-6 grid-rows-[auto_1fr_1fr_1fr_auto]"
+        >
             {/* Skills Header */}
             <SectionHeader
                 title="SKILLS"

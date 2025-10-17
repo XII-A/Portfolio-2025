@@ -138,7 +138,10 @@ const WorkExperience = () => {
     }
 
     return (
-        <div className="text-primary-foreground col-span-full grid grid-cols-6 grid-rows-[auto_1fr_auto] border-t">
+        <div
+            id="projects"
+            className="text-primary-foreground col-span-full grid grid-cols-6 grid-rows-[auto_1fr_auto] border-t"
+        >
             {/* Work Experience Header */}
             <SectionHeader
                 title="WORK"

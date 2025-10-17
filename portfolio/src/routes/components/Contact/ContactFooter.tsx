@@ -26,7 +26,7 @@ const socialMedia = [
 
 const ContactFooter = () => {
     return (
-        <div className="col-span-full">
+        <div id="contact" className="col-span-full">
             <div className="text-primary-foreground bg-primary relative z-10 col-span-full grid grid-cols-6 border-t lg:pt-[72px]">
                 <div className="col-span-full flex flex-col gap-7 px-3 lg:contents">
                     <div className="col-span-1 mt-10 lg:mt-3 lg:ps-8">

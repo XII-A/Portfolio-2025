@@ -2,7 +2,10 @@ import SectionHeader from '../shared/SectionHeader'
 
 const AboutMe = () => {
     return (
-        <div className="text-primary-foreground col-span-full grid min-h-screen grid-cols-6 grid-rows-[auto_1fr_1fr_1fr_auto] border-t">
+        <div
+            id="about"
+            className="text-primary-foreground col-span-full grid min-h-screen grid-cols-6 grid-rows-[auto_1fr_1fr_1fr_auto] border-t"
+        >
             {/* About Header */}
             <SectionHeader title="ABOUT" subtitle="me" />
 

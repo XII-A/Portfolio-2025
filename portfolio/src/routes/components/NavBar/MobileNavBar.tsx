@@ -58,6 +58,10 @@ const MobileNavBar = () => {
                                         href={item.toLowerCase()}
                                         label={item}
                                         className="text-primary w-full"
+                                        onClick={() => {
+                                            setIsOpen(false)
+                                            setHasAnimationEnded(true)
+                                        }}
                                     />
                                 ))}
                             </div>
