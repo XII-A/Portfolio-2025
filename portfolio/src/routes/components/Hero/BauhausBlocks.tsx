@@ -94,7 +94,7 @@ const BauhausBlocks = () => {
                 <div
                     className="bg-primary-foreground absolute top-0 left-1/2 z-10 size-3 rounded-full lg:size-4"
                     style={{
-                        transform: 'translateX(-50%) translateY(-50%)'
+                        transform: 'translateX(-55%) translateY(-50%)'
                     }}
                 />
 

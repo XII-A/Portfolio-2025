@@ -10,7 +10,12 @@ const MobileNavBar = () => {
 
     return (
         <>
-            <div className="bg-primary sticky top-0 z-10 z-20 col-span-full flex h-[72px] flex-row border-b lg:hidden">
+            <div
+                className={cn(
+                    'bg-primary sticky top-0 z-20 col-span-full flex h-[72px] flex-row lg:hidden',
+                    isOpen ? 'border-b-0' : 'border-b'
+                )}
+            >
                 <NavButton
                     key={`nav-bar-main-mobile`}
                     className={cn(
