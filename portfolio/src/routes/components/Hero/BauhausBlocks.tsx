@@ -2,7 +2,7 @@ import { AtomIcon, CircuitryIcon, FlaskIcon, LightbulbIcon, SparkleIcon } from '
 
 const BauhausBlocks = () => {
     return (
-        <div className="text-primary-foreground col-span-full grid h-full grid-cols-5 grid-rows-4 border-s-0 border-t lg:col-span-3 lg:border-s lg:border-b-0">
+        <div className="text-primary-foreground col-span-full grid h-full grid-cols-5 grid-rows-4 border-s-0 border-t lg:col-span-3 lg:border-s lg:border-t-0 lg:border-b-0">
             {/* B */}
             <div className="border-primary-foreground relative col-span-1 grid place-items-center overflow-visible border border-s-0 border-e-0 border-t-0">
                 <div className="border-primary-foreground flex aspect-square w-full items-center justify-center rounded-full border-3 border-dashed">
