@@ -26,10 +26,25 @@ const NavButton = (props: Props) => {
         if (href !== 'ar.' && href !== 'close' && href !== 'menu') {
             const element = document.getElementById(href)
             if (element) {
-                element.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                })
+                // Check if we're on mobile (lg breakpoint is 1024px)
+                const isMobile = window.innerWidth < 1024
+
+                if (isMobile) {
+                    // On mobile, scroll to element with offset for the sticky header (72px)
+                    const headerHeight = 72
+                    const elementPosition = element.offsetTop - headerHeight
+
+                    window.scrollTo({
+                        top: elementPosition,
+                        behavior: 'smooth'
+                    })
+                } else {
+                    // On desktop, use normal scrollIntoView
+                    element.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    })
+                }
             }
         }
     }
