@@ -1,17 +1,17 @@
-import { AtomIcon, FlaskIcon, FramerLogoIcon, LightbulbIcon, SparkleIcon } from '@phosphor-icons/react'
+import { AtomIcon, CircuitryIcon, FlaskIcon, LightbulbIcon, SparkleIcon } from '@phosphor-icons/react'
 
 const BauhausBlocks = () => {
     return (
-        <div className="text-primary-foreground col-span-full grid h-full grid-cols-5 grid-rows-4 border-s-0 border-b lg:col-span-3 lg:border-s lg:border-b-0">
+        <div className="text-primary-foreground col-span-full grid h-full grid-cols-5 grid-rows-4 border-s-0 border-t lg:col-span-3 lg:border-s lg:border-b-0">
             {/* B */}
             <div className="border-primary-foreground relative col-span-1 grid place-items-center overflow-visible border border-s-0 border-e-0 border-t-0">
                 <div className="border-primary-foreground flex aspect-square w-full items-center justify-center rounded-full border-3 border-dashed">
-                    <FramerLogoIcon className="size-20" weight="duotone" />
+                    <CircuitryIcon className="size-16 lg:size-20" weight="duotone" />
                 </div>
 
                 {/* circle at the center right */}
                 <div
-                    className="bg-primary-foreground absolute end-0 bottom-1/2 z-10 size-4 rounded-full"
+                    className="bg-primary-foreground absolute end-0 bottom-1/2 z-10 size-3 rounded-full lg:size-4"
                     style={{
                         transform: 'translateY(50%) translateX(50%)'
                     }}
@@ -42,8 +42,8 @@ const BauhausBlocks = () => {
             </div>
 
             {/* 2 cols 1 row (shipping) */}
-            <div className="border-primary-foreground col-span-3 border border-s-0 border-e-0 border-t-0">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-full w-full">
+            <div className="border-primary-foreground col-span-3 overflow-hidden border border-s-0 border-e-0 border-t-0">
+                <svg xmlns="http://www.w3.org/2000/svg" className="hidden h-full w-full lg:block">
                     <g>
                         <text
                             y="50%"
@@ -59,21 +59,24 @@ const BauhausBlocks = () => {
                         </text>
                     </g>
                 </svg>
+                <div className="text-primary-foreground flex h-full items-center justify-center overflow-hidden text-5xl font-medium lg:hidden">
+                    creativity
+                </div>
             </div>
 
             {/* 1 col 1 row  (star)*/}
             <div className="border-primary-foreground col-span-1 grid place-items-center overflow-hidden border border-s-0 border-e-0 border-t-0">
-                <LightbulbIcon className="size-20" weight="duotone" />
+                <LightbulbIcon className="size-16 lg:size-20" weight="duotone" />
             </div>
 
             {/* 1 col 1 row  (U)*/}
             <div className="border-primary-foreground relative col-span-1 row-span-1 grid place-items-center overflow-visible border border-s-0 border-t-0">
                 <div className="border-primary-foreground flex aspect-square w-full items-center justify-center rounded-full border-3 border-dashed">
-                    <AtomIcon className="size-20" weight="duotone" />
+                    <AtomIcon className="size-16 lg:size-20" weight="duotone" />
                 </div>
                 {/* circle at the center left */}
                 <div
-                    className="bg-primary-foreground absolute start-0 bottom-1/2 z-10 size-4 rounded-full"
+                    className="bg-primary-foreground absolute start-0 bottom-1/2 z-10 size-3 rounded-full lg:size-4"
                     style={{
                         transform: 'translateY(50%) translateX(-50%)'
                     }}
@@ -82,14 +85,14 @@ const BauhausBlocks = () => {
 
             {/* 1 col 1 row  (I)*/}
             <div className="border-primary-foreground col-span-1 row-span-1 grid place-items-center overflow-hidden border border-s-0 border-t-0">
-                <FlaskIcon className="size-20" weight="duotone" />
+                <FlaskIcon className="size-16 lg:size-20" weight="duotone" />
             </div>
 
             {/* 1 col 2 rows  (↓) */}
             <div className="border-primary-foreground relative col-span-1 row-span-2 border border-s-0 border-e-0 border-t-0">
                 {/* circle at top center */}
                 <div
-                    className="bg-primary-foreground absolute top-0 left-1/2 z-10 size-4 rounded-full"
+                    className="bg-primary-foreground absolute top-0 left-1/2 z-10 size-3 rounded-full lg:size-4"
                     style={{
                         transform: 'translateX(-50%) translateY(-50%)'
                     }}
@@ -111,12 +114,12 @@ const BauhausBlocks = () => {
             </div>
 
             {/* 1 col 1 row  (D)*/}
-            <div className="border-primary-foreground relative col-span-1 col-start-5 row-span-1 grid place-items-start overflow-visible">
+            <div className="border-primary-foreground relative col-span-1 col-start-5 row-span-1 grid place-items-start">
                 <div className="border-primary-foreground bg-primary flex aspect-square w-full items-center justify-center rounded-full border-3 border-dashed">
-                    <SparkleIcon className="size-20" weight="duotone" />
+                    <SparkleIcon className="size-16 lg:size-20" weight="duotone" />
                 </div>
                 <div
-                    className="bg-primary-foreground absolute end-1/2 top-0 size-4 rounded-full"
+                    className="bg-primary-foreground absolute end-1/2 top-0 size-3 rounded-full lg:size-4"
                     style={{
                         transform: 'translateY(-50%) translateX(45%)'
                     }}
