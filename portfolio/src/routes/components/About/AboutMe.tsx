@@ -15,13 +15,12 @@ const AboutMe = () => {
                 <div className="bg-secondary border-primary-foreground relative h-48 w-48 border-4 sm:h-56 sm:w-56 lg:h-64 lg:w-64">
                     {/* Placeholder for profile image */}
                     <div className="absolute inset-0 flex items-center justify-center">
-                        <svg
-                            viewBox="0 0 100 100"
-                            className="text-primary-foreground h-24 w-24 fill-current sm:h-28 sm:w-28 lg:h-32 lg:w-32"
-                        >
-                            <circle cx="50" cy="35" r="20" />
-                            <path d="M20 85 Q20 65 50 65 Q80 65 80 85" />
-                        </svg>
+                        <img
+                            src="/me.jpg"
+                            alt="Profile"
+                            className="h-full w-full object-cover grayscale"
+                            style={{ objectPosition: 'center 10%' }}
+                        />
                     </div>
                     {/* Geometric accent */}
                     <div className="bg-work-work absolute -top-2 -right-2 h-6 w-6 sm:h-8 sm:w-8"></div>
