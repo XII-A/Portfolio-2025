@@ -225,9 +225,10 @@ const SkillsSection = () => {
                 </div>
                 <div className="flex flex-col justify-center px-2 py-4 text-center sm:p-4">
                     <div className="text-2xl font-bold sm:text-3xl" style={{ color: 'var(--color-accent)' }}>
-                        3+
+                        1000+
                     </div>
-                    <div className="text-sm sm:text-base">Years Exp</div>
+                    <div className="hidden sm:block sm:text-base">Hours Invested</div>
+                    <div className="block text-sm sm:hidden">Hours</div>
                 </div>
             </div>
         </div>
