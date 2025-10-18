@@ -16,15 +16,15 @@ const ExperienceBar = ({
     company: string
     role: string
     dates: string
-    category: 'work' | 'freelance' | 'education'
-    description: string
+    category: 'work' | 'project' | 'education'
+    description: string[]
     isExpanded: boolean
 }) => {
     const getCategoryColorValue = (cat: string) => {
         switch (cat) {
             case 'work':
                 return 'var(--color-work-work)'
-            case 'freelance':
+            case 'project':
                 return 'var(--color-work-freelance)'
             case 'education':
                 return 'var(--color-work-education)'
@@ -66,7 +66,13 @@ const ExperienceBar = ({
             </AccordionTrigger>
             <AccordionContent className="AccordionContent">
                 <div className="px-6 py-4">
-                    <p className="text-primary-foreground text-xs leading-relaxed sm:text-sm">{description}</p>
+                    <ul className="text-primary-foreground list-inside list-disc space-y-2 text-xs leading-relaxed sm:text-sm">
+                        {description.map((item, index) => (
+                            <li key={index} className="list-item items-start">
+                                <span>{item}</span>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
             </AccordionContent>
         </AccordionItem>
@@ -79,57 +85,100 @@ const WorkExperience = () => {
     const experiences = [
         {
             id: '1',
-            company: 'Tech Solutions Inc.',
-            role: 'Senior Frontend Developer',
-            dates: '2023 - Present',
+            company: 'Molham Team',
+            role: 'Full Stack Developer',
+            dates: 'July 2024 - Present',
             category: 'work' as const,
-            description:
-                'Leading the development of modern web applications using React, TypeScript, and Next.js. Collaborated with cross-functional teams to deliver high-quality user experiences and implemented best practices for code quality and performance optimization.'
+            description: [
+                'Leading the development of an integrated ERP platform for NGOs, alongside an internal procurement app and a local-first data collection mobile app',
+                'Automated supplier screening process using Puppeteer and Gmail API, saving significant manual effort',
+                'Implemented cross-organization beneficiary similarity check using text analysis algorithms, reducing duplicate sponsorships',
+                'Built robust synchronization solution for offline data collection with guaranteed consistency',
+                'Developed 15+ reusable UI components library and handled distributed systems communication with Redis pub/sub and BullMQ',
+                'Trained and mentored two interns to contribute production-ready features within two months'
+            ]
         },
         {
             id: '2',
-            company: 'Digital Agency Pro',
-            role: 'Full Stack Developer',
-            dates: '2021 - 2023',
+            company: 'Toptalla',
+            role: 'Front End Developer',
+            dates: 'Nov 2023 - Apr 2024',
             category: 'work' as const,
-            description:
-                'Developed and maintained web applications for various clients using React, Node.js, and PostgreSQL. Worked closely with designers and project managers to ensure timely delivery of projects while maintaining high code quality standards.'
+            description: [
+                "Integrated Meta's API into salons' portfolio system with automated content publishing and metrics viewing",
+                'Established a referral system enabling salons to refer other businesses to the platform, boosting user acquisition',
+                'Implemented the complete Marketplace front end UI, giving businesses a platform to showcase and sell their products'
+            ]
         },
         {
             id: '3',
-            company: 'E-commerce Platform',
-            role: 'Frontend Developer (Freelance)',
-            dates: '2020 - 2021',
-            category: 'freelance' as const,
-            description:
-                'Built responsive e-commerce interfaces using React and Tailwind CSS. Implemented payment integration and optimized performance for better user experience. Delivered the project ahead of schedule with excellent client feedback.'
+            company: 'Toptalla',
+            role: 'Front End Developer Intern',
+            dates: 'July 2023 - Aug 2023',
+            category: 'work' as const,
+            description: [
+                'Translated Figma wireframes into responsive, customizable website themes',
+                'Helped salons establish their online presence through modern web development'
+            ]
         },
         {
             id: '4',
-            company: 'Mobile App Startup',
-            role: 'React Native Developer (Freelance)',
-            dates: '2019 - 2020',
-            category: 'freelance' as const,
-            description:
-                "Developed cross-platform mobile applications using React Native. Implemented real-time features and integrated third-party APIs. Contributed to the startup's growth by delivering a robust mobile solution."
+            company: 'Spotlight NGO',
+            role: 'Full Stack Developer (Freelance)',
+            dates: 'Oct 2025',
+            category: 'work' as const,
+            description: [
+                'Developed a multilingual, responsive website for an NGO using Next.js (frontend) and Strapi CMS (backend)',
+                'Built a custom Markdown parser to support embedded media (videos, iframes) in blog posts managed via Strapi',
+                'Designed SEO-friendly blog post pages with sitemap generation',
+                'Ensured mobile-first responsiveness and optimized page performance for accessibility and engagement'
+            ]
         },
         {
             id: '5',
-            company: 'Computer Science University',
-            role: 'Bachelor of Computer Science',
-            dates: '2016 - 2020',
-            category: 'education' as const,
-            description:
-                'Graduated with honors, focusing on software engineering, data structures, and algorithms. Completed multiple projects including web applications, mobile apps, and database systems. Active in coding competitions and hackathons.'
+            company: 'Bazerni',
+            role: 'Full Stack Developer (Freelance)',
+            dates: 'Dec 2024 - Mar 2025',
+            category: 'work' as const,
+            description: [
+                'Optimized the process of creating ads for mobile devices, using touch friendly interactions and responsive design to provide a native like and more accessible experience for users on mobile devices',
+                'Built a dynamic filtering component that utilizes URL search parameters to manage filter states, enabling server side rendering in Next.js and improving page load speeds'
+            ]
         },
         {
             id: '6',
-            company: 'React Advanced Course',
-            role: 'Advanced React Certification',
-            dates: '2020',
+            company: 'Fitness Tracker',
+            role: 'Full Stack Developer (Project)',
+            dates: 'Apr 2024 - May 2024',
+            category: 'project' as const,
+            description: [
+                'Developed a fitness tracking app using React Native and Expo, allowing users to track their workouts, activities, and progress',
+                'Built an Admin Dashboard using Next.js allowing users to manage and add courses, classes, and trainers'
+            ]
+        },
+        {
+            id: '7',
+            company: 'House Rent Price Prediction',
+            role: 'Machine Learning Project',
+            dates: '2023',
+            category: 'project' as const,
+            description: [
+                'Built a deep learning model to predict rental prices in Turkey using real estate data scraped from EmlakJet',
+                'Improved data quality by removing outliers, scaling features, and applying feature engineering',
+                'Achieved 0.22 MSE, outperforming Random Forest (0.36) and Linear Regression (0.24) models'
+            ]
+        },
+        {
+            id: '8',
+            company: 'Ankara University',
+            role: 'BSc in Computer Engineering',
+            dates: 'Aug 2020 - July 2024',
             category: 'education' as const,
-            description:
-                'Completed comprehensive React course covering advanced concepts including hooks, context, performance optimization, and testing. Gained deep understanding of modern React development patterns and best practices.'
+            description: [
+                'Graduated with a CGPA of 3.92/4',
+                'Focused on computer engineering fundamentals, software development, and system design',
+                'Completed comprehensive coursework in programming, algorithms, data structures, and software engineering principles'
+            ]
         }
     ]
 
@@ -148,7 +197,7 @@ const WorkExperience = () => {
                 subtitle="& EXPERIENCE"
                 legend={[
                     { label: 'Work', color: 'var(--color-work-work)' },
-                    { label: 'Freelance', color: 'var(--color-work-freelance)' },
+                    { label: 'Projects', color: 'var(--color-work-freelance)' },
                     { label: 'Education', color: 'var(--color-work-education)' }
                 ]}
             />
@@ -180,13 +229,13 @@ const WorkExperience = () => {
             <div className="col-span-full row-span-1 grid grid-cols-4 border-t">
                 <div className="border-primary-foreground flex flex-col justify-center border-r px-2 py-4 text-center sm:p-4">
                     <div className="text-2xl font-bold sm:text-3xl" style={{ color: 'var(--color-work-work)' }}>
-                        6
+                        {experiences.filter((experience) => experience.category === 'work').length}
                     </div>
                     <div className="text-sm sm:text-base">Total</div>
                 </div>
                 <div className="border-primary-foreground flex flex-col justify-center border-r px-2 py-4 text-center sm:p-4">
                     <div className="text-2xl font-bold sm:text-3xl" style={{ color: 'var(--color-work-freelance)' }}>
-                        4+
+                        3+
                     </div>
                     <div className="text-sm sm:text-base">Years Exp</div>
                 </div>
@@ -198,9 +247,9 @@ const WorkExperience = () => {
                 </div>
                 <div className="flex flex-col justify-center px-2 py-4 text-center sm:p-4">
                     <div className="text-2xl font-bold sm:text-3xl" style={{ color: 'var(--color-accent)' }}>
-                        2
+                        {experiences.map((experience) => experience.description).flat().length}
                     </div>
-                    <div className="text-sm sm:text-base">Projects</div>
+                    <div className="text-sm sm:text-base">Highlights</div>
                 </div>
             </div>
         </div>
