@@ -4,22 +4,22 @@ import { cn } from '../../../utils/cn'
 const socialMedia = [
     {
         Icon: LinkedinLogoIcon,
-        url: 'https://www.linkedin.com/in/dev-abdulrazak-armanazi',
+        url: 'https://www.linkedin.com/in/dev-abdulrazak-armanazi/',
         color: `oklch(0.5313 0.1301 243.65)`
     },
     {
         Icon: GithubLogoIcon,
-        url: 'https://github.com/dev-abdulrazak-armanazi',
+        url: 'https://github.com/XII-A',
         color: `oklch(0.4097 0.2064 289.57)`
     },
     {
         Icon: XLogoIcon,
-        url: 'https://twitter.com/dev-abdulrazak-armanazi',
+        url: 'https://x.com/Chrono_Mania',
         color: `#000`
     },
     {
         Icon: ThreadsLogoIcon,
-        url: 'https://www.instagram.com/dev-abdulrazak-armanazi',
+        url: 'https://www.instagram.com/ar_dev_404/',
         color: `oklch(0.6209 0.2607 345.83)`
     }
 ]
@@ -30,15 +30,15 @@ const ContactFooter = () => {
             <div className="text-primary-foreground bg-primary relative z-10 col-span-full grid grid-cols-6 border-t lg:pt-[72px]">
                 <div className="col-span-full flex flex-col gap-7 px-3 lg:contents">
                     <div className="col-span-1 mt-10 lg:mt-3 lg:ps-8">
-                        <div className="text-lg font-bold">Get in touch:</div>
+                        <div className="text-base font-bold sm:text-lg">Get in touch:</div>
                     </div>
                     <div className="lg:col-span-5">
-                        <div className="text-3xl leading-none font-bold lg:text-(length:--footer-heading-size)">
+                        <div className="text-2xl leading-none font-bold lg:text-(length:--footer-heading-size)">
                             If you'd like to chat, you can reach me at:
                         </div>
 
-                        <div className="text-accent mt-4 text-3xl font-bold lg:text-(length:--footer-heading-size)">
-                            ar.armanazi@gmail.com
+                        <div className="text-accent mt-4 text-2xl font-bold lg:text-(length:--footer-heading-size)">
+                            ar.fs.developer@gmail.com
                         </div>
                     </div>
                 </div>
