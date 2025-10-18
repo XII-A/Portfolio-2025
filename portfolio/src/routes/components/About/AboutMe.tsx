@@ -1,3 +1,4 @@
+import { cn } from '../../../utils/cn'
 import SectionHeader from '../shared/SectionHeader'
 
 const AboutMe = () => {
@@ -23,8 +24,15 @@ const AboutMe = () => {
                         </svg>
                     </div>
                     {/* Geometric accent */}
-                    <div className="bg-accent absolute -top-2 -right-2 h-6 w-6 sm:h-8 sm:w-8"></div>
-                    <div className="bg-accent-secondary absolute -bottom-2 -left-2 h-4 w-4 sm:h-6 sm:w-6"></div>
+                    <div className="bg-work-work absolute -top-2 -right-2 h-6 w-6 sm:h-8 sm:w-8"></div>
+                    <div className="bg-work-freelance absolute -bottom-2 -left-2 h-4 w-4 rounded-full sm:h-6 sm:w-6"></div>
+                    {/* triangle for the work-education */}
+                    <div
+                        className={cn(
+                            'absolute -right-4 -bottom-2',
+                            'size-0 border-[0_16px_32px_16px] border-[transparent_transparent_#008551_transparent]'
+                        )}
+                    ></div>
                 </div>
             </div>
 
@@ -37,15 +45,21 @@ const AboutMe = () => {
                 <div className="bg-primary-foreground border-primary-foreground absolute right-4 bottom-4 h-2 w-2 rotate-45 border-2"></div>
 
                 <div className="max-w-2xl pt-8 pr-8 pb-8 pl-8 sm:pt-10 sm:pr-10 sm:pb-10 sm:pl-10 lg:pt-0 lg:pr-0 lg:pb-0 lg:pl-0">
-                    <div className="mb-4 text-xl font-bold sm:text-2xl">ABDULRAZAK ARMANAZI</div>
+                    <div className="mb-4 text-xl font-bold sm:text-2xl">Abdulrazak Armanazi</div>
                     <div className="mb-6 text-base leading-relaxed sm:text-lg">
-                        I'm a passionate developer with a focus on creating clean, functional, and user-centered
-                        applications. My journey in software development spans across web, mobile, and desktop
-                        platforms, where I combine technical expertise with a keen eye for design.
+                        I'm a full-stack developer <i>{'(or as I like to call myself, a problem solver)'}</i> who
+                        approaches software like a detective approaches a case, with{' '}
+                        <span className="bg-work-work text-primary px-2">curiosity</span>,{' '}
+                        <span className="bg-work-freelance text-primary px-2">percision</span>, and a{' '}
+                        <span className="bg-work-education text-primary px-2">drive</span> to uncover and solve every
+                        edge case. To me, every system is a puzzle waiting to be solved. I analyze problems, test
+                        hypotheses, and refine solutions until every piece of the puzzle is in place.
                     </div>
-                    <div className="text-sm leading-relaxed sm:text-base">
-                        With experience in modern development practices and a commitment to continuous learning, I enjoy
-                        tackling complex problems and turning ideas into reality through code.
+                    <div className="text-base leading-relaxed">
+                        Over the past few years, I've built everything from local-first mobile apps and ERP systems to
+                        single page applications and intelligent automation tools. I thrive in environments where I have
+                        autonomy to experiment, learn continuously, and work on projects that help people focus on the
+                        things that matter.
                     </div>
                 </div>
             </div>

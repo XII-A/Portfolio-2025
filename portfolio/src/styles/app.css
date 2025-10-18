@@ -23,15 +23,15 @@
     --color-primary-foreground: #454545;
     --color-accent: #3b82f6;
     --color-accent-foreground: #1a1a1a;
-    --color-accent-secondary: #10b981;
+    --color-accent-secondary: oklch(0.5341 0.1944 161.3358);
     --color-accent-secondary-foreground: #1a1a1a;
     --color-skill-languages: oklch(0.55 0.22 27);
     --color-skill-frameworks: oklch(0.45 0.15 264);
-    --color-skill-tools: oklch(0.85 0.15 85);
+    --color-skill-tools: oklch(0.5341 0.1944 161.3358);
     --color-skill-empty: oklch(0.7 0.01 269);
     --color-work-work: oklch(0.55 0.22 27);
     --color-work-freelance: oklch(0.45 0.15 264);
-    --color-work-education: oklch(0.85 0.15 85);
+    --color-work-education: oklch(0.5341 0.1944 161.3358);
     --center-to-navbar: calc((((100vw - (30px * 2)) / 6) / 2) - 21px);
     --heading-size: clamp(38px, 2.5vw, 3rem);
     --heading-size-mobile: clamp(24px, 4vw, 36px);
