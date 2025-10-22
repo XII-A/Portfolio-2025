@@ -17,7 +17,15 @@ const ExperienceBar = ({
     role: string
     dates: string
     category: 'work' | 'project' | 'education'
-    description: string[]
+    description: (
+        | string
+        | {
+              type: string
+              href: string
+              linkLabel: string
+              text: string
+          }
+    )[]
     isExpanded: boolean
 }) => {
     const getCategoryColorValue = (cat: string) => {
@@ -69,7 +77,27 @@ const ExperienceBar = ({
                     <ul className="text-primary-foreground list-inside list-disc space-y-2 text-xs leading-relaxed sm:text-sm">
                         {description.map((item, index) => (
                             <li key={index} className="list-item items-start">
-                                <span>{item}</span>
+                                {typeof item === 'string' ? (
+                                    <span>{item}</span>
+                                ) : (
+                                    <>
+                                        {item.type === 'link' ? (
+                                            <span>
+                                                {item.text}{' '}
+                                                <a
+                                                    href={item.href}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="text-accent underline"
+                                                >
+                                                    {item.linkLabel}
+                                                </a>
+                                            </span>
+                                        ) : (
+                                            <span>{item.text}</span>
+                                        )}
+                                    </>
+                                )}
                             </li>
                         ))}
                     </ul>
@@ -113,7 +141,7 @@ const WorkExperience = () => {
         {
             id: '3',
             company: 'Toptalla',
-            role: 'Front End Developer Intern',
+            role: 'Front End Developer (Intern)',
             dates: 'July 2023 - Aug 2023',
             category: 'work' as const,
             description: [
@@ -131,7 +159,13 @@ const WorkExperience = () => {
                 'Developed a multilingual, responsive website for an NGO using Next.js (frontend) and Strapi CMS (backend)',
                 'Built a custom Markdown parser to support embedded media (videos, iframes) in blog posts managed via Strapi',
                 'Designed SEO-friendly blog post pages with sitemap generation',
-                'Ensured mobile-first responsiveness and optimized page performance for accessibility and engagement'
+                'Ensured mobile-first responsiveness and optimized page performance for accessibility and engagement',
+                {
+                    type: 'link',
+                    href: 'https://www.spotlight-ngo.com/en/home',
+                    linkLabel: 'spotlight-ngo',
+                    text: 'You can view the live website here:'
+                }
             ]
         },
         {
@@ -143,6 +177,30 @@ const WorkExperience = () => {
             description: [
                 'Optimized the process of creating ads for mobile devices, using touch friendly interactions and responsive design to provide a native like and more accessible experience for users on mobile devices',
                 'Built a dynamic filtering component that utilizes URL search parameters to manage filter states, enabling server side rendering in Next.js and improving page load speeds'
+            ]
+        },
+        {
+            id: '10',
+            company: 'This Portfolio',
+            role: 'Design Director / Front End Developer (Project)',
+            dates: 'OCT 2025',
+            category: 'project' as const,
+            description: ['I think it turned out pretty great :)']
+        },
+        {
+            id: '9',
+            company: 'Framer Template',
+            role: 'Front End Developer (Project)',
+            dates: 'Dec 2024',
+            category: 'project' as const,
+            description: [
+                'Worked on recreating a framer template from scratch using Astro, React, and Typescript',
+                {
+                    type: 'link',
+                    href: 'https://framer-template-rebuild.vercel.app/',
+                    linkLabel: 'framer-template',
+                    text: 'You can view the live website here:'
+                }
             ]
         },
         {
