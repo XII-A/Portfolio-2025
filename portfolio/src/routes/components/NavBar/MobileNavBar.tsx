@@ -22,6 +22,14 @@ const MobileNavBar = () => {
                         'bg-secondary text-primary hover:bg-primary hover:text-primary-foreground flex-1 border-0 italic'
                     )}
                     href="ar."
+                    onClick={() => {
+                        const link = document.createElement('a')
+                        link.href = '/cv.pdf'
+                        link.download = 'cv.pdf'
+                        document.body.appendChild(link)
+                        link.click()
+                        document.body.removeChild(link)
+                    }}
                     label={'ar.'}
                 />
                 <NavButton

@@ -13,11 +13,24 @@ const NavBar = () => {
                 <NavButton
                     key={`nav-bar-main`}
                     className={cn(
-                        'bg-secondary text-primary hover:bg-primary hover:text-primary-foreground border-s-0 italic'
+                        'bg-secondary text-primary   border-s-0 ',
+                        'group'
                     )}
                     href="ar."
-                    label={'ar.'}
-                />
+                    onClick={() => {
+                        const link = document.createElement('a')
+                        link.href = '/cv.pdf'
+                        link.download = 'cv.pdf'
+                        document.body.appendChild(link)
+                        link.click()
+                        document.body.removeChild(link)
+                    }}
+                >
+                    <span className="flip-container">
+                        <span className="flip-face italic">ar.</span>
+                        <span className="flip-face flip-back italic">cv.</span>
+                    </span>
+                </NavButton>
 
                 {NAV_BAR_ITEMS.map((item, index) => (
                     <NavButton
